@@ -1,4 +1,4 @@
-import 'package:firebase_project/page/login_page.dart';
+import 'package:firebase_project/pages/login_page.dart';
 import 'package:flutter/material.dart';
 
 void main() {
@@ -11,9 +11,7 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      title: 'Flutter Demo',
-      theme: ThemeData(
-      ),
+      debugShowCheckedModeBanner: false,
       home: LoginPage(),
     );
   }
