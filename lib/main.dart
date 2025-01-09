@@ -1,7 +1,15 @@
-import 'package:firebase_project/pages/login_page.dart';
+import 'package:firebase_project/route/routes.dart';
 import 'package:flutter/material.dart';
+import 'package:firebase_core/firebase_core.dart';
+import 'package:firebase_project/firebase_options.dart';
+import 'package:get/get.dart';
 
-void main() {
+Future<void> main() async {
+
+  await Firebase.initializeApp(
+    options: DefaultFirebaseOptions.currentPlatform,
+);
+
   runApp(const MyApp());
 }
 
@@ -10,9 +18,10 @@ class MyApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
+    return GetMaterialApp(
       debugShowCheckedModeBanner: false,
-      home: LoginPage(),
+      initialRoute: MyRoutes.login,
+      routes: MyRoutes.getRoutes(),
     );
   }
 }
