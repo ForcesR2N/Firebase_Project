@@ -3,7 +3,7 @@ import 'package:flutter/widgets.dart';
 import 'package:get/get.dart';
 
 class LoginController extends GetxController {
-  // AuthService authService = Get.put(AuthService());
+  //  AuthService authService = Get.put(AuthService());
   final emailController = TextEditingController();
   final passwordController = TextEditingController();
 
